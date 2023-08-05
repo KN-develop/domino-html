@@ -1,0 +1,22 @@
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: rem(25px) rem(36px);
+    cursor: pointer;
+
+    transition: background-color $transition-duration $transition-function;
+
+    &:hover {
+      background-color: $gold;
+      color: $black;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

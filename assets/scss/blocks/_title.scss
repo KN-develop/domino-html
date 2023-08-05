@@ -1,0 +1,10 @@
+.title {
+  color: $white;
+
+  &--yellow-bg {
+    @media #{$screen-desktop} {
+      color: $black;
+      background-color: $gold;
+    }
+  }
+}

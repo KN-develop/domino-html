@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: $font-family;
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+
+  font-size: rem($font-size-base);
+
+  background: $bg-gradient;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: url("/profi/public/images/bg/bg-l-desctop.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    opacity: 0.05;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  @include huge-title;
+  margin: 0;
+}
+
+h2 {
+  @include large-title;
+  margin: 0;
+}
+
+h3 {
+  @include medium-title;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  @include list-reset;
+}

@@ -1,0 +1,27 @@
+.page {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100dvh;
+
+  overflow: hidden;
+  z-index: $z-page;
+
+  @media #{$screen-laptop} {
+    height: 100vh;
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+  align-items: center;
+
+  &--col-laptop {
+    flex-direction: column;
+
+    @media #{$screen-desktop} {
+      flex-direction: row;
+    }
+  }
+
+  &--col {
+    flex-direction: column;
+  }
+}

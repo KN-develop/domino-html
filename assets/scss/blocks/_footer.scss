@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  height: $footer-height-mobile;
+
+  @media #{$screen-laptop} {
+    height: $footer-height-laptop;
+  }
+
+  @media #{$screen-desktop} {
+    height: $footer-height-desktop;
+  }
+}

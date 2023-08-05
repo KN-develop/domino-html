@@ -1,0 +1,36 @@
+/**
+* Vendors
+*/
+@import "~normalize.css";
+
+/**
+* Abstracts
+*/
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+/**
+* Base
+*/
+@import "base/fonts";
+@import "base/generic";
+
+/*
+* Components
+*/
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/btn";
+@import "blocks/icon";
+@import "blocks/menu";
+@import "blocks/main";
+@import "blocks/logo";
+@import "blocks/title";
+@import "blocks/btns";
+@import "blocks/links";
+@import "blocks/link";
+@import "blocks/domino";
+@import "blocks/nav";
+@import "blocks/footer";
