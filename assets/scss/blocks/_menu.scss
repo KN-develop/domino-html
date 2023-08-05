@@ -9,9 +9,9 @@
 
     height: 100dvh;
     width: 100vw;
-    max-width: rem(380px);
+    max-width: 100%;
 
-    padding: rem(28px) rem(38px) rem(55px);
+    padding: rem(28px) 0 rem(55px);
 
     background-color: $black;
 
@@ -19,6 +19,11 @@
 
     @media #{$screen-laptop} {
       height: 100vh;
+      max-width: 375px;
+    }
+
+    @media #{$screen-desktop} {
+      max-width: 30%;
     }
   }
 
@@ -30,97 +35,91 @@
     &__btn {
       align-self: flex-end;
       margin-bottom: rem(36px);
+      margin-right: 4vw;
 
-      &:hover {
-        transform: rotate(20deg);
+      @media (hover: hover) {
+        &:hover {
+          transition-duration: $transition-duration-medium;
+          transform: rotate(20deg);
+        }
       }
 
       &-line:first-child {
-        transform: rotate(45deg) translateY(7px);
+        transform: translate(-50%, -50%) rotate(45deg);
       }
 
       &-line:nth-child(2) {
-        visibility: hidden;
+        display: none;
       }
 
       &-line:last-child {
-        transform: rotate(-45deg) translateY(-7px);
-      }
-
-      @media #{$screen-laptop} {
-        &-line:first-child {
-          transform: rotate(45deg) translateY(14px);
-        }
-
-        &-line:last-child {
-          transform: rotate(-45deg) translateY(-14px);
-        }
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
     }
   }
 
-  &:not(&--open) &__btn:hover &__btn-line {
-    &:first-child {
-      transform: translateY(2px);
-    }
-
-    &:nth-child(2) {
-      visibility: hidden;
-    }
-
-    &:last-child {
-      transform: translateY(-2px);
-    }
-
-    @media #{$screen-laptop} {
+  @media (hover: hover) {
+    &:not(&--open) &__btn:hover &__btn-line {
       &:first-child {
-        transform: translateY(5px);
+        transform: translate(-50%, 4px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
       }
 
       &:last-child {
-        transform: translateY(-5px);
+        transform: translate(-50%, -4px);
       }
     }
   }
 
   &__btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    display: block;
 
-    width: rem(18px);
-    height: rem(12px);
+    width: 48px;
+    height: 48px;
+    padding: 12px 6px;
 
     cursor: pointer;
 
     z-index: $z-menu-btn;
     transition: transform $transition-duration $transition-function;
 
-    &:hover &-line {
-      background-color: $guardsman-red;
+    @media (hover: hover) {
+      &:hover &-line {
+        background-color: $guardsman-red;
+      }
     }
 
     &:active &-line {
       opacity: 0.5;
     }
 
-    @media #{$screen-laptop} {
-      width: rem(36px);
-      height: rem(25px);
-    }
-
     &-line {
-      width: 100%;
-      height: rem(2px);
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: calc(100% - 12px);
+      height: 4px;
 
       background-color: $white;
       border-radius: rem($border-radius-medium);
 
       transition: background-color $transition-duration $transition-function,
-        opacity $transition-duration $transition-function;
+        opacity $transition-duration $transition-function,
+        transform $transition-duration-medium $transition-function;
 
-      @media #{$screen-laptop} {
-        height: rem(4px);
+      transform: translate(-50%, 200%);
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%);
+      }
+
+      &:last-child {
+        transform: translate(-50%, -300%);
       }
     }
   }
@@ -137,8 +136,11 @@
   }
 
   &__nav {
-    margin-left: rem(-38px);
     color: $white;
+
+    @media #{$screen-desktop} {
+      padding-top: 2vw;
+    }
   }
 
   &__links {

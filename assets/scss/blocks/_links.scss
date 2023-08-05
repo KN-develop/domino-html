@@ -1,13 +1,11 @@
 .links {
-  display: flex;
+  display: none;
   align-items: center;
+  flex-direction: column;
 
-  &--col-laptop {
-    flex-direction: column;
-
-    @media #{$screen-desktop} {
-      flex-direction: row;
-    }
+  @media #{$screen-laptop} {
+    display: flex;
+    flex-direction: row;
   }
 
   &--col {

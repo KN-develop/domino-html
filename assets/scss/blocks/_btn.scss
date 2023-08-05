@@ -45,19 +45,24 @@
   }
 
   &--big {
-    height: rem(60px);
-    width: rem(315px);
+    height: rem(47px);
+    width: 100%;
 
-    padding: 0 rem(30px);
+    padding: 0 rem(20px);
 
     font-size: rem(16px);
     font-weight: $font-weight-semiBold;
-    line-height: rem(31px);
+    line-height: rem(21px);
 
     @media #{$screen-laptop} {
       height: rem($btn-height-big);
 
       font-size: rem(20px);
+    }
+
+    @media #{$screen-desktop} {
+      height: 4.3vw;
+      font-size: 1.25vw;
     }
   }
 

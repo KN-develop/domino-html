@@ -22,10 +22,9 @@
   }
 
   @media #{$screen-desktop} {
-    width: rem($domino-width-big);
-    height: rem($domino-height-big);
-
-    padding: rem(20px);
+    width: 10.625vw;
+    height: 29.375vw;
+    padding: 1.25vw;
   }
 
   &__block {
@@ -85,8 +84,8 @@
     }
 
     @media #{$screen-desktop} {
-      width: rem(25px);
-      height: rem(25px);
+      width: 1.5625vw;
+      height: 1.5625vw;
     }
   }
 }
