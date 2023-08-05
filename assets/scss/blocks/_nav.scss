@@ -5,18 +5,29 @@
   }
 
   &__item {
-    padding: rem(25px) rem(36px);
-    cursor: pointer;
-
     transition: background-color $transition-duration $transition-function;
 
-    &:hover {
-      background-color: $gold;
-      color: $black;
-    }
+    a {
+      display: block;
+      padding: rem(25px) rem(36px);
+      text-decoration: none;
 
-    &:active {
-      opacity: 0.5;
+      @media (hover: hover) {
+        &:hover {
+          background-color: $gold;
+          color: $black;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+
+      @media #{$screen-desktop} {
+        font-size: 1.6vw;
+        padding-top: 1.6vw;
+        padding-bottom: 1.6vw;
+      }
     }
   }
 }

@@ -42,7 +42,6 @@
   &__title {
     align-self: flex-start;
 
-    max-width: rem(840px);
     margin-bottom: 3vh;
 
     @media #{$screen-laptop} {
@@ -50,6 +49,7 @@
     }
 
     @media #{$screen-desktop} {
+      max-width: 60%;
       margin-bottom: 0;
     }
 
@@ -80,7 +80,8 @@
     @media #{$screen-desktop} {
       position: absolute;
       top: 0;
-      right: 115px;
+      left: 80%;
+      transform: translateX(-50%);
     }
   }
 }
