@@ -59,8 +59,14 @@
   }
 
   &__btns {
+    width: 100%;
     margin-top: 5vh;
     gap: rem(15px);
+
+    @media #{$screen-laptop} {
+      width: initial;
+    }
+
     @media #{$screen-desktop} {
       gap: rem(20px);
       margin-top: 10vh;
