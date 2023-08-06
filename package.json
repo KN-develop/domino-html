@@ -8,7 +8,6 @@
     "build": "webpack --mode=production"
   },
   "author": "Damir",
-  "license": "ISC",
   "browserslist": [
     "ie >= 10"
   ],
