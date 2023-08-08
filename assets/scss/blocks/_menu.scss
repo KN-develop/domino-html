@@ -144,7 +144,12 @@
   }
 
   &__links {
+    text-align: center;
     margin-top: auto;
     gap: rem(16px);
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
   }
 }
