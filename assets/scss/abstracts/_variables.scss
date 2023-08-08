@@ -41,6 +41,8 @@ $font-weight-black: 900;
 */
 $screen-desktop: "(min-width: 1280px)";
 $screen-laptop: "(min-width: 744px)";
+$max-screen-mobile: "(max-width: 744px)";
+$max-screen-laptop: "(min-width: 1280px)";
 
 /**
 * Layout
