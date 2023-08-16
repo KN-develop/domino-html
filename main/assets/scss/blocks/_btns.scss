@@ -1,0 +1,24 @@
+.btns {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  @media #{$screen-laptop} {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .btn {
+      width: rem(315px);
+    }
+  }
+
+  @media #{$screen-desktop} {
+    justify-content: flex-start;
+
+    .btn {
+      width: 20vw;
+    }
+  }
+}

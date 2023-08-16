@@ -1,0 +1,138 @@
+.domino {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: rem($domino-width-small);
+  height: rem($domino-height-small);
+
+  padding: rem(7px);
+
+  background-color: $white;
+  border-radius: rem($border-radius-medium);
+
+  box-shadow: $shadow;
+
+  animation: rotation 5s ease-in-out 1.5s infinite;
+  @media #{$screen-laptop} {
+    width: rem($domino-width-medium);
+    height: rem($domino-height-medium);
+
+    padding: rem(15px);
+  }
+
+  @media #{$screen-desktop} {
+    width: 10.625vw;
+    height: 29.375vw;
+    padding: 1.25vw;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 35%;
+
+    &--top {
+      animation: down 2.5s ease-in-out alternate infinite;
+    }
+
+    &--bottom {
+      animation: up 2.5s ease-in-out 1s alternate infinite;
+    }
+
+    &--single {
+      justify-content: center;
+    }
+
+    &--double {
+      justify-content: space-between;
+    }
+
+    &--triple {
+      justify-content: normal;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100% / 3);
+
+    &--single {
+      justify-content: center;
+    }
+
+    &--double {
+      justify-content: space-between;
+    }
+  }
+
+  &__dot {
+    width: rem(12px);
+    height: rem(12px);
+
+    border-radius: 50%;
+    background-color: $black;
+
+    @media #{$screen-laptop} {
+      width: rem(20px);
+      height: rem(20px);
+    }
+
+    @media #{$screen-desktop} {
+      width: 1.5625vw;
+      height: 1.5625vw;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(180deg);
+  }
+
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes down {
+  0%,
+  40% {
+    transform: translateY(0);
+  }
+
+  60%,
+  100% {
+    transform: translateY(187%);
+  }
+}
+
+@keyframes up {
+  0%,
+  40% {
+    transform: translateY(0);
+  }
+
+  60%,
+  100% {
+    transform: translateY(-187%);
+  }
+}

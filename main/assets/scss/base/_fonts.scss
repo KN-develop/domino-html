@@ -1,0 +1,79 @@
+@font-face {
+  $font-name: "#{$font-family-custom}-ExtraLight";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-ExtraLight"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-extraLight;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-Light";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-Light"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-light;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-Regular";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-Regular"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-Medium";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-Medium"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-medium;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-SemiBold";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-SemiBold"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-semiBold;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-Bold";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-Bold"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-ExtraBold";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-ExtraBold"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-extraBold;
+  font-style: normal;
+}
+
+@font-face {
+  $font-name: "#{$font-family-custom}-Black";
+  font-family: $font-family-custom;
+  src: local("#{$font-family-custom}-Black"),
+    url("#{$font-path}/#{$font-name}.woff2") format("woff2"),
+    url("#{$font-path}/#{$font-name}.woff") format("woff");
+  font-weight: $font-weight-black;
+  font-style: normal;
+}

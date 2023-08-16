@@ -1,0 +1,155 @@
+.menu {
+  &--open {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100dvh;
+    width: 100vw;
+    max-width: 100%;
+
+    padding: rem(28px) 0 rem(55px);
+
+    background-color: $black;
+
+    z-index: $z-menu;
+
+    @media #{$screen-laptop} {
+      height: 100vh;
+      max-width: 375px;
+    }
+
+    @media #{$screen-desktop} {
+      max-width: 30%;
+    }
+  }
+
+  &--open & {
+    &__wrapper {
+      display: flex;
+    }
+
+    &__btn {
+      align-self: flex-end;
+      margin-bottom: rem(36px);
+      margin-right: 4vw;
+
+      @media (hover: hover) {
+        &:hover {
+          transition-duration: $transition-duration-medium;
+          transform: rotate(20deg);
+        }
+      }
+
+      &-line:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &-line:nth-child(2) {
+        display: none;
+      }
+
+      &-line:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    &:not(&--open) &__btn:hover &__btn-line {
+      &:first-child {
+        transform: translate(-50%, 4px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: translate(-50%, -4px);
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+
+    width: 48px;
+    height: 48px;
+    padding: 12px 6px;
+
+    cursor: pointer;
+
+    z-index: $z-menu-btn;
+    transition: transform $transition-duration $transition-function;
+
+    @media (hover: hover) {
+      &:hover &-line {
+        background-color: $guardsman-red;
+      }
+    }
+
+    &:active &-line {
+      opacity: 0.5;
+    }
+
+    &-line {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: calc(100% - 12px);
+      height: 4px;
+
+      background-color: $white;
+      border-radius: rem($border-radius-medium);
+
+      transition: background-color $transition-duration $transition-function,
+        opacity $transition-duration $transition-function,
+        transform $transition-duration-medium $transition-function;
+
+      transform: translate(-50%, 200%);
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%);
+      }
+
+      &:last-child {
+        transform: translate(-50%, -300%);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__logo {
+    align-self: center;
+    margin-bottom: rem(35px);
+  }
+
+  &__nav {
+    color: $white;
+
+    @media #{$screen-desktop} {
+      padding-top: 2vw;
+    }
+  }
+
+  &__links {
+    text-align: center;
+    margin-top: auto;
+    gap: rem(16px);
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.link {
+  font-size: rem(12px);
+  transition: all $transition-duration $transition-function;
+
+  @media #{$screen-laptop} {
+    font-size: rem(14px);
+  }
+
+  @media #{$screen-desktop} {
+    font-size: 1.6vw;
+    line-height: 1.6vw;
+  }
+
+  &--white {
+    font-weight: $font-weight-medium;
+    color: $white;
+
+    &:hover {
+      color: $guardsman-red;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &--with-icon {
+    display: flex;
+    align-items: center;
+    gap: rem(5px);
+  }
+
+  &__icon--medium {
+    width: rem($icon-size-medium);
+    height: rem($icon-size-medium);
+  }
+}

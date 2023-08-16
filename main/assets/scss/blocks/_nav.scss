@@ -1,0 +1,33 @@
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    transition: background-color $transition-duration $transition-function;
+
+    a {
+      display: block;
+      padding: rem(25px) rem(36px);
+      text-decoration: none;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $gold;
+          color: $black;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+
+      @media #{$screen-desktop} {
+        font-size: 1.6vw;
+        padding-top: 1.6vw;
+        padding-bottom: 1.6vw;
+      }
+    }
+  }
+}

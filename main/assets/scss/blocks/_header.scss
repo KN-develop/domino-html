@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  height: rem($header-height-mobile);
+
+  @media #{$screen-laptop} {
+    height: rem($header-height-laptop);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__wrapper:not(:has(&__col--logo)) {
+    justify-content: space-between;
+  }
+
+  &__contacts-btn-text {
+    display: none;
+
+    @media #{$screen-laptop} {
+      display: block;
+
+      span {
+        display: none;
+      }
+    }
+
+    @media #{$screen-desktop} {
+      span {
+        display: inline;
+      }
+    }
+  }
+}
