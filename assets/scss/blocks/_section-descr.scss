@@ -1,0 +1,45 @@
+.section-descr {
+  color: $white;
+  &__title {
+    &--yellow-bg {
+      display: inline;
+      @media #{$screen-desktop} {
+        color: $black;
+        background-color: $gold;
+      }
+    }
+
+    &--yellow-marker {
+      @media #{$screen-desktop} {
+        width: 33vw;
+
+        margin-left: -$gap-container;
+        padding: 12px 0;
+        padding-left: $gap-container;
+
+        background-color: $gold;
+        color: $black;
+      }
+    }
+  }
+
+  &__title--yellow-marker + &__text {
+    margin-top: 16px;
+
+    @media #{$screen-desktop} {
+      margin-top: 9px;
+    }
+  }
+
+  &__text {
+    margin-top: 14px;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    @media #{$screen-laptop} {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+}

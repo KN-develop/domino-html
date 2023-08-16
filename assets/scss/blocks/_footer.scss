@@ -1,6 +1,11 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+
   width: 100%;
   height: $footer-height-mobile;
+
+  z-index: $z-footer;
 
   @media #{$screen-laptop} {
     height: $footer-height-laptop;
@@ -8,5 +13,17 @@
 
   @media #{$screen-desktop} {
     height: $footer-height-desktop;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  &__btns {
+    position: relative;
+    width: 100%;
   }
 }

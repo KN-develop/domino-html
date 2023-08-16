@@ -2,6 +2,7 @@
 * Vendors
 */
 @import "~normalize.css";
+@import "~swiper/css/swiper.min.css";
 
 /**
 * Abstracts
@@ -27,10 +28,24 @@
 @import "blocks/menu";
 @import "blocks/main";
 @import "blocks/logo";
-@import "blocks/title";
 @import "blocks/btns";
 @import "blocks/links";
 @import "blocks/link";
 @import "blocks/domino";
 @import "blocks/nav";
 @import "blocks/footer";
+@import "blocks/services";
+@import "blocks/section-descr";
+@import "blocks/cards";
+@import "blocks/card";
+@import "blocks/process";
+@import "blocks/development";
+@import "blocks/steps";
+@import "blocks/step";
+@import "blocks/portfolio";
+@import "blocks/slider";
+@import "blocks/examples";
+@import "blocks/example";
+@import "blocks/questions";
+@import "blocks/form";
+@import "blocks/input";

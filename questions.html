@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <link rel="stylesheet" href="public/css/style.css" />
     <script defer src="public/js/script.js"></script>
-    <title>Главная страница</title>
+    <title>Контакты</title>
   </head>
   <body>
     <div class="page">
@@ -35,6 +35,15 @@
                   </svg>
                 </span>
               </a>
+            </div>
+            <div class="header__col header__col--logo">
+              <div class="logo">
+                <img
+                  class="logo__img"
+                  src="public/images/svg/logo.svg"
+                  alt="logo"
+                />
+              </div>
             </div>
             <div class="header__col header__col--menu">
               <div class="menu" data-menu>
@@ -86,61 +95,51 @@
           </div>
         </div>
       </header>
-      <main class="page__content main__content">
-        <div class="container main__container">
-          <div class="main__wrapper">
-            <div class="main__logo logo">
-              <img
-                class="logo__img"
-                src="public/images/svg/logo.svg"
-                alt="logo"
-              />
-            </div>
-
-            <div class="main__descr section-descr">
-              <h2 class="section-descr__title section-descr__title--yellow-bg">
-                Разрабатываем веб-приложения, сайты и веб3 криптопроекты
+      <main class="page__content questions__content">
+        <div class="container">
+          <div class="questions__wrapper">
+            <div class="questions__descr section-descr">
+              <h2 class="questions__descr-title section-descr__title">
+                Остались вопросы ? Напишите нам
               </h2>
+              <p class="questions__descr-text section-descr__text">
+                Оставьте нам заявку или напишите нашему специалисту в Telegram и
+                мы обязательно с вами свяжемся !
+              </p>
             </div>
-            <div class="main__domino">
-              <div class="domino domino--centered">
-                <div
-                  class="domino__block domino__block--single domino__block--top"
-                >
-                  <div class="domino__row domino__row--single">
-                    <span class="domino__dot"></span>
-                  </div>
-                </div>
-                <div
-                  class="domino__block domino__block--triple domino__block--bottom"
-                >
-                  <div class="domino__row domino__row--double">
-                    <span class="domino__dot"></span>
-                    <span class="domino__dot"></span>
-                  </div>
-                  <div class="domino__row domino__row--single">
-                    <span class="domino__dot"></span>
-                  </div>
-                  <div class="domino__row domino__row--double">
-                    <span class="domino__dot"></span>
-                    <span class="domino__dot"></span>
-                  </div>
-                </div>
+            <form method="post" class="questions__form form">
+              <div class="input input--error">
+                <input type="text" placeholder="ФИО" class="input__control" />
               </div>
-            </div>
-
-            <ul class="main__btns btns btns--col-laptop">
-              <li class="btns__item">
-                <button class="btn btn--white btn--big">
-                  Рассчитать проект
-                </button>
-              </li>
-              <li class="btns__item">
-                <button class="btn btn--white btn--big">Портфолио</button>
-              </li>
-            </ul>
-
-            <ul class="main__links links links--col-laptop">
+              <div class="input input--success">
+                <input
+                  type="text"
+                  placeholder="Наименование организации"
+                  class="input__control"
+                />
+              </div>
+              <div class="input">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="input__control"
+                />
+              </div>
+              <div class="input input--textarea">
+                <textarea
+                  placeholder="Ваш комментарий"
+                  class="input__control"
+                  name="comments"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="form__btn btn btn--white btn--medium"
+              >
+                Отправить
+              </button>
+            </form>
+            <ul class="questions__links links">
               <li class="link__item">
                 <a href="#" class="link link--white">Domino@domino.ru</a>
               </li>
@@ -160,22 +159,19 @@
           </div>
         </div>
       </main>
-      <footer class="page__footer footer">
+      <footer class="page__footer questions__footer footer">
         <div class="container">
           <div class="footer__wrapper">
             <ul class="footer__btns btns">
-              <li class="btns__item btns__item--centered">
-                <button
-                  class="btn btn--white btn--icon-medium btn--hidden-text"
-                >
+              <li class="btns__item btns__item--right">
+                <button class="btn btn--black btn--circle btn--icon-medium">
                   <span class="btn__icon btn__icon--big">
-                    <svg class="icon icon--arrow-down">
+                    <svg class="icon">
                       <use
                         xlink:href="/profi/public/images/icons/sprite.svg#icon-arrow"
                       ></use>
                     </svg>
                   </span>
-                  <span class="btn__text">Услуги</span>
                 </button>
               </li>
             </ul>

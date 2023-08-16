@@ -4,15 +4,21 @@
     flex-direction: column;
   }
 
-  &__item {
-    padding: rem(25px) rem(36px);
-    cursor: pointer;
+  &__link {
+    display: block;
 
-    transition: background-color $transition-duration $transition-function;
+    padding: 25px 36px;
 
-    &:hover {
-      background-color: $gold;
-      color: $black;
+    color: inherit;
+    text-decoration: none;
+
+    transition: all $transition-duration $transition-function;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $gold;
+        color: $black;
+      }
     }
 
     &:active {

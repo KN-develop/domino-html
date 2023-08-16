@@ -1,0 +1,31 @@
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin-top: -20px;
+
+  @media #{$screen-desktop} {
+    row-gap: 32px;
+    margin-top: -40px;
+  }
+
+  @media #{$screen-desktop} {
+    row-gap: 32px;
+    margin-top: 0;
+  }
+
+  &__item {
+    width: 100%;
+
+    margin-top: -15px;
+
+    @media #{$screen-desktop} {
+      width: 33%;
+
+      margin-top: 0;
+      margin-left: -15px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.portfolio {
+  &__content {
+    padding: 1vh 0;
+    max-height: none;
+
+    @media #{$screen-laptop} {
+      padding-top: 2vh;
+    }
+
+    @media #{$screen-desktop} {
+      padding-top: 3vh;
+
+      position: relative;
+
+      &::before {
+        position: absolute;
+
+        content: "";
+
+        background-color: $cod-gray;
+
+        top: 0;
+        bottom: auto;
+
+        width: 40vw;
+        height: calc(100vh - #{$header-height-laptop});
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  &__descr {
+    margin-bottom: 7vh;
+    z-index: $z-slider;
+
+    @media #{$screen-laptop} {
+      margin-bottom: 6vh;
+    }
+  }
+
+  &__slider {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    @media #{$screen-desktop} {
+      position: static;
+    }
+  }
+}

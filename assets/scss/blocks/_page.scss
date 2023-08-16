@@ -19,6 +19,22 @@
 
   &__content {
     flex-grow: 1;
+
+    max-height: calc(
+      100vh - #{$footer-height-mobile} - #{$header-height-mobile}
+    );
+
+    @media #{$screen-laptop} {
+      max-height: calc(
+        100vh - #{$footer-height-laptop} - #{$header-height-laptop}
+      );
+    }
+
+    @media #{$screen-desktop} {
+      max-height: calc(
+        100vh - #{$footer-height-desktop} - #{$header-height-laptop}
+      );
+    }
   }
 
   &__footer {

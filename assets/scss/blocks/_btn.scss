@@ -16,57 +16,212 @@
     color: $black;
     background-color: $white;
 
-    border-radius: rem($border-radius-medium);
+    border-radius: $border-radius-medium;
     box-shadow: $shadow;
 
     text-align: center;
-
-    &:hover {
-      background-color: $guardsman-red;
-      color: $white;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $guardsman-red;
+        color: $white;
+      }
     }
-
     &:active {
       opacity: 0.5;
     }
   }
 
+  &--black {
+    color: $white;
+    background-color: $black;
+
+    box-shadow: $shadow;
+    border-radius: $border-radius-medium;
+
+    text-align: center;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $guardsman-red;
+        color: $black;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &--red {
+    color: $white;
+    background-color: $guardsman-red;
+
+    box-shadow: $shadow;
+    border-radius: $border-radius-medium;
+
+    text-align: center;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &--icon {
+    &-small {
+      width: 32px;
+      height: 32px;
+
+      @media #{$screen-laptop} {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-medium {
+      width: 45px;
+      height: 45px;
+
+      @media #{$screen-laptop} {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &-big {
+      width: 48px;
+      height: 48px;
+
+      @media #{$screen-laptop} {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    &--hidden-text:hover {
+      max-width: 300px;
+      padding-left: 25px;
+      padding-right: 40px;
+
+      @media #{$screen-laptop} {
+        padding-right: 30px;
+      }
+    }
+
+    &--hidden-text:hover &__text {
+      max-width: 200px;
+
+      margin-left: 20px;
+
+      @media #{$screen-laptop} {
+        margin-left: 35px;
+      }
+    }
+  }
+
+  &--hidden-text {
+    width: auto;
+    max-width: 70px;
+
+    padding: 0 15px;
+
+    overflow: hidden;
+    transition: padding 0.15s $transition-function,
+      max-width 0.15s $transition-function;
+
+    @media #{$screen-laptop} {
+      padding: 0 20px;
+    }
+  }
+
+  &--hidden-text &__text {
+    max-width: 0;
+
+    margin-left: 0;
+
+    font-size: 14px;
+    overflow: hidden;
+
+    transition: margin 0.15s $transition-function,
+      max-width 0.15s $transition-function;
+    @media #{$screen-laptop} {
+      font-size: 21px;
+    }
+  }
+
+  &--small {
+    height: 30px;
+    padding: 0 15px;
+
+    border-radius: $border-radius-miniture;
+  }
+
   &--medium {
-    height: rem($btn-height-medium);
+    height: $btn-height-medium;
 
-    padding: 0 rem(20px);
+    padding: 0 20px;
 
-    font-size: rem(16px);
-    line-height: rem(20px);
+    font-size: 16px;
+    line-height: 20px;
 
     @media #{$screen-desktop} {
-      padding: 0 rem(35px);
+      padding: 0 35px;
     }
   }
 
   &--big {
-    height: rem(60px);
-    width: rem(315px);
+    height: 60px;
+    width: 315px;
 
-    padding: 0 rem(30px);
+    padding: 0 30px;
 
-    font-size: rem(16px);
+    font-size: 16px;
     font-weight: $font-weight-semiBold;
-    line-height: rem(31px);
+    line-height: 31px;
 
     @media #{$screen-laptop} {
-      height: rem($btn-height-big);
+      height: $btn-height-big;
 
-      font-size: rem(20px);
+      font-size: 20px;
     }
   }
 
   &--with-icons {
-    gap: rem(10px);
+    gap: 10px;
   }
 
-  &__icon--medium {
-    width: rem($icon-size-medium);
-    height: rem($icon-size-medium);
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &__icon {
+    &--small {
+      width: $icon-size-small;
+      height: $icon-size-small;
+    }
+
+    &--medium {
+      width: $icon-size-medium;
+      height: $icon-size-medium;
+    }
+
+    &--big {
+      width: $icon-size-small;
+      height: $icon-size-small;
+
+      @media #{$screen-laptop} {
+        width: $icon-size-big;
+        height: $icon-size-big;
+      }
+    }
+
+    &--huge {
+      width: $icon-size-huge;
+      height: $icon-size-huge;
+    }
   }
 }

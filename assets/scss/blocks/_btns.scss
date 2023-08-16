@@ -9,4 +9,15 @@
       flex-direction: row;
     }
   }
+
+  &__item {
+    &--centered {
+      margin: 0 auto;
+    }
+
+    &--right {
+      position: absolute;
+      right: 0;
+    }
+  }
 }

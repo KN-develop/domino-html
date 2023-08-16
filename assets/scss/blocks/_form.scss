@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  gap: 32px;
+
+  @media #{$screen-laptop} {
+    width: 80%;
+  }
+
+  @media #{$screen-desktop} {
+    width: 45%;
+  }
+
+  &__btn {
+    width: 100%;
+
+    @media #{$screen-laptop} {
+      align-self: flex-end;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$gap-mobile: 40px;
+$gap-desktop: 20px;
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+
+  gap: $gap-mobile;
+
+  @media #{$screen-laptop} {
+    gap: $gap-desktop;
+  }
+
+  &__item {
+    width: 430px;
+    max-width: 100%;
+
+    flex-shrink: 0;
+
+    @media #{$screen-laptop} {
+      min-width: 430px;
+    }
+
+    @media #{$screen-desktop} {
+      width: calc(33% - (#{$gap-desktop} / 2));
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.input {
+  height: $input-height;
+
+  &--textarea {
+    height: $input-textarea-height;
+  }
+
+  &--textarea & {
+    &__control {
+      padding: 12px 32px;
+      resize: none;
+    }
+  }
+
+  &--error,
+  &--success {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 12px;
+      right: 8px;
+
+      content: "";
+
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-image: url("../images/svg/error.svg");
+    }
+  }
+
+  &--success {
+    &::before {
+      background-image: url("../images/svg/success.svg");
+    }
+  }
+
+  &__control {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 32px;
+
+    border-radius: $border-radius-miniture;
+    border: none;
+
+    font-weight: $font-weight-light;
+    font-size: 12px;
+    line-height: 18px;
+
+    background-color: #101010;
+    color: $white;
+
+    &::placeholder {
+      color: #8f8b8b;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    @media #{$screen-laptop} {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}

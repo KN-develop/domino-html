@@ -9,9 +9,9 @@
 
     height: 100dvh;
     width: 100vw;
-    max-width: rem(380px);
+    max-width: 380px;
 
-    padding: rem(28px) rem(38px) rem(55px);
+    padding: 90px 0 55px;
 
     background-color: $black;
 
@@ -19,6 +19,7 @@
 
     @media #{$screen-laptop} {
       height: 100vh;
+      padding-top: 110px;
     }
   }
 
@@ -28,15 +29,18 @@
     }
 
     &__btn {
-      align-self: flex-end;
-      margin-bottom: rem(36px);
+      position: absolute;
+      top: 34px;
+      right: 28px;
 
-      &:hover {
-        transform: rotate(20deg);
+      @media (hover: hover) {
+        &:hover {
+          transform: rotate(20deg);
+        }
       }
 
       &-line:first-child {
-        transform: rotate(45deg) translateY(7px);
+        transform: translateY(5px) rotate(45deg);
       }
 
       &-line:nth-child(2) {
@@ -44,60 +48,81 @@
       }
 
       &-line:last-child {
-        transform: rotate(-45deg) translateY(-7px);
+        transform: translateY(-5px) rotate(-45deg);
       }
 
       @media #{$screen-laptop} {
+        top: 39px;
+
         &-line:first-child {
-          transform: rotate(45deg) translateY(14px);
+          transform: translateY(11px) rotate(45deg);
         }
 
         &-line:last-child {
-          transform: rotate(-45deg) translateY(-14px);
+          transform: translateY(-11px) rotate(-45deg);
         }
       }
     }
   }
 
-  &:not(&--open) &__btn:hover &__btn-line {
-    &:first-child {
-      transform: translateY(2px);
-    }
-
-    &:nth-child(2) {
-      visibility: hidden;
-    }
-
-    &:last-child {
-      transform: translateY(-2px);
-    }
-
-    @media #{$screen-laptop} {
+  @media (hover: hover) {
+    &:not(&--open) &__btn:hover &__btn-line {
       &:first-child {
-        transform: translateY(5px);
+        transform: translateY(2px);
+      }
+
+      &:nth-child(2) {
+        visibility: hidden;
       }
 
       &:last-child {
-        transform: translateY(-5px);
+        transform: translateY(-2px);
+      }
+
+      @media #{$screen-laptop} {
+        &:first-child {
+          transform: translateY(5px);
+        }
+
+        &:last-child {
+          transform: translateY(-5px);
+        }
       }
     }
   }
 
   &__btn {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    width: rem(18px);
-    height: rem(12px);
+    width: 18px;
+    height: 12px;
 
     cursor: pointer;
 
     z-index: $z-menu-btn;
-    transition: transform $transition-duration $transition-function;
+    transition: transform $transition-duration-medium $transition-function;
 
-    &:hover &-line {
-      background-color: $guardsman-red;
+    &::after {
+      position: absolute;
+      top: -100%;
+      left: -60%;
+
+      width: 40px;
+      height: 40px;
+
+      content: "";
+
+      cursor: pointer;
+    }
+
+    @media (hover: hover) {
+      &:hover &-line {
+        background-color: $guardsman-red;
+      }
     }
 
     &:active &-line {
@@ -105,22 +130,27 @@
     }
 
     @media #{$screen-laptop} {
-      width: rem(36px);
-      height: rem(25px);
+      width: 36px;
+      height: 25px;
+
+      &::after {
+        display: none;
+      }
     }
 
     &-line {
       width: 100%;
-      height: rem(2px);
+      height: 2px;
 
       background-color: $white;
-      border-radius: rem($border-radius-medium);
+      border-radius: $border-radius-medium;
 
-      transition: background-color $transition-duration $transition-function,
-        opacity $transition-duration $transition-function;
+      transition: background-color $transition-duration-medium
+          $transition-function,
+        opacity $transition-duration-medium $transition-function;
 
       @media #{$screen-laptop} {
-        height: rem(4px);
+        height: 4px;
       }
     }
   }
@@ -133,16 +163,15 @@
 
   &__logo {
     align-self: center;
-    margin-bottom: rem(35px);
+    margin-bottom: 35px;
   }
 
   &__nav {
-    margin-left: rem(-38px);
     color: $white;
   }
 
   &__links {
     margin-top: auto;
-    gap: rem(16px);
+    gap: 16px;
   }
 }

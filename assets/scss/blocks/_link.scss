@@ -1,21 +1,23 @@
 .link {
-  font-size: rem(12px);
+  font-size: 12px;
   transition: all $transition-duration $transition-function;
 
   @media #{$screen-laptop} {
-    font-size: rem(14px);
+    font-size: 14px;
   }
 
   @media #{$screen-desktop} {
-    font-size: rem(18px);
+    font-size: 18px;
   }
 
   &--white {
     font-weight: $font-weight-medium;
     color: $white;
 
-    &:hover {
-      color: $guardsman-red;
+    @media (hover: hover) {
+      &:hover {
+        color: $guardsman-red;
+      }
     }
 
     &:active {
@@ -26,11 +28,11 @@
   &--with-icon {
     display: flex;
     align-items: center;
-    gap: rem(5px);
+    gap: 5px;
   }
 
   &__icon--medium {
-    width: rem($icon-size-medium);
-    height: rem($icon-size-medium);
+    width: $icon-size-medium;
+    height: $icon-size-medium;
   }
 }
