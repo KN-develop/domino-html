@@ -16,7 +16,14 @@
         &:hover {
           background-color: $gold;
           color: $black;
+          opacity: 0.9;
         }
+      }
+
+      &.mod-active {
+        background-color: $gold;
+        color: $black;
+        opacity: 1;
       }
 
       &:active {
