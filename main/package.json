@@ -21,7 +21,8 @@
     "overlayscrollbars": "^1.13.3",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9",
-    "svgxuse": "^1.2.6"
+    "svgxuse": "^1.2.6",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",

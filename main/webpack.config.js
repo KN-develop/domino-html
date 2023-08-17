@@ -84,7 +84,7 @@ function createSVGIconsModule() {
           extract: true,
           spriteFilename: "./images/icons/sprite.svg",
           symbolId: (filePath) =>
-            "icon-" + path.basename(filePath).split(".")[0],
+              "icon-" + path.basename(filePath).split(".")[0],
         },
       },
       {
