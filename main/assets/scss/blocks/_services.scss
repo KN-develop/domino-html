@@ -1,0 +1,49 @@
+.services {
+  &__content {
+    padding: 1vh 0;
+
+    @media #{$screen-laptop} {
+      padding-top: 2vh;
+    }
+
+    @media #{$screen-desktop} {
+      padding-top: 3vh;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  &__descr {
+    margin-bottom: 15px;
+
+    &-text {
+      display: none;
+
+      @media #{$screen-laptop} {
+        display: block;
+      }
+    }
+  }
+
+  &__cards-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__cards {
+    height: 90%;
+    max-height: 750px;
+
+    min-width: 100%;
+
+    @media #{$screen-laptop} {
+      height: 90%;
+    }
+  }
+}

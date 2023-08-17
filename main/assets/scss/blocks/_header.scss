@@ -9,11 +9,23 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__wrapper:not(:has(&__col--logo)) {
     justify-content: space-between;
+  }
+
+  &__col {
+    &--logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: logoHead 1s forwards;
+      animation-timing-function: ease-in-out;
+    }
   }
 
   &__contacts-btn-text {
@@ -32,5 +44,17 @@
         display: inline;
       }
     }
+  }
+}
+
+@keyframes logoHead {
+  0% {
+    transform: translate(-50%, -1000px) rotate(-3deg);
+  }
+  80% {
+    transform: translate(-50%, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }

@@ -5,10 +5,11 @@ $black: #000;
 $white: #fff;
 $gold: #ffd700;
 $guardsman-red: #cc0000;
+$cod-gray: #101010;
 /**
 * Fonts
 */
-$font-path: "/public/fonts";
+$font-path: "../fonts";
 $font-family-default: sans-serif;
 $font-family-custom: "Unbounded";
 $font-family: $font-family-custom, $font-family-default;
@@ -60,11 +61,16 @@ $footer-height-desktop: 120px;
 * Sizes
 */
 
+$input-height: 56px;
+$input-textarea-height: 170px;
+
 $btn-height-big: 80px;
 $btn-height-medium: 50px;
 
+$icon-size-huge: 42px;
 $icon-size-big: 24px;
 $icon-size-medium: 18px;
+$icon-size-small: 12px;
 
 $logo-width-medium: 270px;
 $logo-height-medium: 40px;
@@ -82,24 +88,32 @@ $domino-height-small: 220px;
 * Transitions and Animations
 */
 $transition-duration: 0.1s;
-$transition-duration-medium: 0.4s;
+$transition-duration-medium: 0.2s;
 $transition-function: ease-in-out;
 
 /**
 * Radius
 */
 $border-radius-medium: 16px;
+$border-radius-small: 12px;
+$border-radius-miniture: 6px;
+
 /**
 * Box-shadows
 */
 
 $shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+$shadow-cards: 2px 2px 6px 1px rgba(0, 0, 0, 0.14);
 $bg-gradient: linear-gradient(119.92deg, #464444 0.13%, #000000 114.59%);
 
 /**
 * Z-indexes
 */
 
-$z-menu-btn: 30;
-$z-menu: 20;
+$z-menu-btn: 50;
+$z-menu: 40;
 $z-page: 10;
+$z-slider: 20;
+$z-card-btn: 30;
+$z-card-content: 20;
+$z-footer: 30;
