@@ -152,6 +152,7 @@ module.exports = (env, argv) => {
         patterns: [
           { from: "assets/images", to: "images" },
           { from: "assets/fonts", to: "fonts" },
+          { from: "assets/root", to: "./" },
         ],
       }),
     ],
