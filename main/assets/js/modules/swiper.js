@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const SELECTORS = {
   slider: "[data-carousel]",
@@ -14,7 +14,7 @@ export default function slider() {
       prev = el.querySelector(SELECTORS.sliderPrevBtn),
       next = el.querySelector(SELECTORS.sliderNextBtn),
       params = {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Autoplay],
         navigation: {
           prevEl: prev,
           nextEl: next,
@@ -22,6 +22,9 @@ export default function slider() {
         slidesPerView: "1",
         centeredSlides: true,
         loop: true,
+        autoplay: {
+            delay: 10000
+        },
         pagination: {
           el: ".swiper-pagination",
           type: "bullets",

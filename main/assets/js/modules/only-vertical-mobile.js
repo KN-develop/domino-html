@@ -8,7 +8,6 @@ export function onlyVerticalMobile() {
     const TIMEOUT = 250;
     const alertMessage = document.querySelector('.js-vertical-alert');
 
-    console.log({mobile, tablet});
     const handler = () => {
         if (timer) {
             clearTimeout(timer);
