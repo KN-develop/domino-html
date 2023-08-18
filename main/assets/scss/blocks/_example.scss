@@ -94,7 +94,8 @@
     height: 100%;
 
     @media #{$screen-desktop} {
-      height: auto;
+      width: 750px;
+      height: 500px;
     }
 
     &-wrapper {
@@ -117,7 +118,9 @@
     }
 
     &-pic {
+      width: 100%;
       height: 100%;
+      object-fit: contain;
     }
   }
 }
