@@ -2,6 +2,7 @@
   &__content {
     padding: 1vh 0;
     max-height: none;
+    overflow: hidden;
 
     @media #{$screen-laptop} {
       padding-top: 2vh;
@@ -46,13 +47,13 @@
 
   &__slider {
     flex-grow: 1;
+    padding-bottom: 80px;
   }
 
   &__footer {
     position: absolute;
     bottom: 0;
-    @media #{$screen-desktop} {
-      position: static;
-    }
+    left: 0;
+    width: 100%;
   }
 }
